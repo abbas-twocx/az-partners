@@ -83,3 +83,30 @@ export const ARCHIVE_BLOCK = `
   populatedDocsTotal
 }
 `
+
+export const CARD_BLOCK = `
+...on CardBlock {
+  blockType
+  richText
+  backgroundColor
+  cards {
+    id
+    ${MEDIA}
+    cardContent
+    link ${LINK_FIELDS({ disableAppearance: true  })}
+  }
+}
+`
+export const OUR_VALUES_BLOCK = `
+...on OurValuesBlock {
+  blockType
+  richText
+  ${MEDIA}
+  cards {
+    id
+    ${MEDIA}
+    cardContent
+    link ${LINK_FIELDS({ disableAppearance: true  })}
+  }
+}
+`

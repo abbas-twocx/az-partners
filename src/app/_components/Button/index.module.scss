@@ -8,10 +8,18 @@
   background-color: transparent;
   text-decoration: none;
   display: inline-flex;
-  padding: 12px 24px;
+  padding: 16px 32px;
   font-family: inherit;
-  line-height: inherit;
-  font-size: inherit;
+  line-height: 100%;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; // Add transition for opacity and transform
+}
+
+.button:hover {
+  opacity: 80%;
+  transform: scale(1.05);
 }
 
 .content {
@@ -34,33 +42,35 @@
 }
 
 .appearance--primary {
-  background-color: var(--theme-elevation-1000);
-  color: var(--theme-elevation-0);
+  background-color: var(--theme-brand-orange);
+  color: var(--theme-brand-white) !important;
 }
 
 .appearance--secondary {
   background-color: transparent;
-  box-shadow: inset 0 0 0 1px var(--theme-elevation-1000);
+  box-shadow: inset 0 0 0 1px var(--theme-brand-orange);
+  color: var(--theme-brand-orange);
 }
 
 .primary--invert {
   background-color: var(--theme-elevation-0);
-  color: var(--theme-elevation-1000);
+  color: var(--theme-brand-orange);
 }
 
 .secondary--invert {
   background-color: var(--theme-elevation-1000);
   box-shadow: inset 0 0 0 1px var(--theme-elevation-0);
+  color: var(--theme-brand-orange);
 }
 
 .appearance--default {
   padding: 0;
-  color: var(--theme-text);
+  color: var(--theme-brand-orange);
 }
 
 .appearance--none {
   padding: 0;
-  color: var(--theme-text);
+  color: var(--theme-brand-orange);
 
   &:local() {
     .label {

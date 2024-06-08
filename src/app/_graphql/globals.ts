@@ -1,10 +1,12 @@
 import { LINK_FIELDS } from './link'
+import { MEDIA_FIELDS } from './media'
 
 export const HEADER = `
   Header {
     navItems {
       link ${LINK_FIELDS({ disableAppearance: true })}
 		}
+    link ${LINK_FIELDS({ disableAppearance: true })}
   }
 `
 
@@ -30,6 +32,9 @@ query Footer {
 
 export const SETTINGS = `
   Settings {
+    siteLogo {
+       ${MEDIA_FIELDS}
+    }
     postsPage {
       slug
     }

@@ -13,6 +13,13 @@ export const Settings: GlobalConfig = {
   },
   fields: [
     {
+      name: 'siteLogo',
+      type: 'upload',
+      relationTo: 'media',
+      label: 'Site logo',
+      required: true,
+    },
+    {
       name: 'postsPage',
       type: 'relationship',
       relationTo: 'pages',

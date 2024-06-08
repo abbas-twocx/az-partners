@@ -10,6 +10,8 @@ import { RelatedPosts, type RelatedPostsProps } from '../../_blocks/RelatedPosts
 import { toKebabCase } from '../../_utilities/toKebabCase'
 import { BackgroundColor } from '../BackgroundColor'
 import { VerticalPadding, VerticalPaddingOptions } from '../VerticalPadding'
+import { CardBlock } from '../../_blocks/CardBlock'
+import { OurValuesBlock } from '../../_blocks/OurValuesBlock'
 
 const blockComponents = {
   cta: CallToActionBlock,
@@ -18,6 +20,8 @@ const blockComponents = {
   archive: ArchiveBlock,
   relatedPosts: RelatedPosts,
   comments: CommentsBlock,
+  cardBlock: CardBlock,
+  ourValuesBlock: OurValuesBlock
 }
 
 export const Blocks: React.FC<{
@@ -65,10 +69,10 @@ export const Blocks: React.FC<{
             if (Block) {
               return (
                 <BackgroundColor key={index} invert={blockIsInverted}>
-                  <VerticalPadding top={paddingTop} bottom={paddingBottom}>
+                  {/* <VerticalPadding top={paddingTop} bottom={paddingBottom}> */}
                     {/* @ts-expect-error */}
                     <Block id={toKebabCase(blockName)} {...block} />
-                  </VerticalPadding>
+                  {/* </VerticalPadding> */}
                 </BackgroundColor>
               )
             }

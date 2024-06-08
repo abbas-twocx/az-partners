@@ -2,7 +2,6 @@
 
 .nav {
   display: flex;
-  gap: calc(var(--base) / 4) var(--base);
   align-items: center;
   flex-wrap: wrap;
   opacity: 1;
@@ -12,6 +11,19 @@
   > * {
     text-decoration: none;
   }
+
+  a {
+    padding: 16px 18px;
+  }
+
+}
+
+.navWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .hide {

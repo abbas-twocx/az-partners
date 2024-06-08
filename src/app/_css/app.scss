@@ -91,10 +91,10 @@ h6 {
 }
 
 p {
-  margin: var(--base) 0;
+  margin: 0;
 
   @include mid-break {
-    margin: calc(var(--base) * .75) 0;
+    margin: 0;
   }
 }
 

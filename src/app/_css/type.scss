@@ -1,101 +1,125 @@
 @use 'queries' as *;
 
-%h1,
+%h1 {
+  font-weight: 700;
+}
+
 %h2,
 %h3,
 %h4,
 %h5,
 %h6 {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 %h1 {
-  margin: 40px 0;
-  font-size: 64px;
-  line-height: 70px;
+  margin: 0;
+  font-size: 76px;
+  line-height: 100%;
   font-weight: bold;
+  margin-bottom: 24px;
 
   @include mid-break {
-    margin: 24px 0;
-    font-size: 42px;
-    line-height: 42px;
+    margin: 0;
+    font-size: 41px;
+    line-height: 100%;
+    margin-bottom: 24px;
   }
 }
 
 %h2 {
-  margin: 28px 0;
-  font-size: 48px;
-  line-height: 54px;
+  margin: 0;
+  font-size: 62px;
+  line-height: 110%;
   font-weight: bold;
+  margin-bottom: 24px;
 
   @include mid-break {
-    margin: 22px 0;
+    margin: 0;
     font-size: 32px;
     line-height: 40px;
+    margin-bottom: 24px;
   }
 }
 
 %h3 {
-  margin: 24px 0;
-  font-size: 32px;
-  line-height: 40px;
+  margin: 0;
+  font-size: 48px;
+  line-height: 120%;
   font-weight: bold;
+  margin-bottom: 16px;
 
   @include mid-break {
-    margin: 20px 0;
+    margin: 0;
     font-size: 26px;
     line-height: 32px;
+    margin-bottom: 16px;
+
   }
 }
 
 %h4 {
-  margin: 20px 0;
-  font-size: 26px;
-  line-height: 32px;
+  margin: 0;
+  font-size: 42px;
+  line-height: 120%;
   font-weight: bold;
+  margin-bottom: 16px;
+
 
   @include mid-break {
-    font-size: 22px;
+    font-size: 21px;
     line-height: 30px;
+    margin-bottom: 16px;
+
   }
 }
 
 %h5 {
-  margin: 20px 0;
-  font-size: 22px;
-  line-height: 30px;
+  margin: 0;
+  font-size: 32px;
+  line-height: 120%;
   font-weight: bold;
+  margin-bottom: 16px;
+
 
   @include mid-break {
     font-size: 18px;
     line-height: 24px;
+    margin-bottom: 16px;
+
   }
 }
 
 %h6 {
-  margin: 20px 0;
+  margin: 0;
   font-size: inherit;
   line-height: inherit;
   font-weight: bold;
+  margin-bottom: 16px;
+
 }
 
 %body {
   font-size: 18px;
   line-height: 32px;
+  margin-bottom: 12px;
 
   @include mid-break {
     font-size: 15px;
     line-height: 24px;
+    margin-bottom: 12px;
   }
 }
 
 %large-body {
   font-size: 25px;
   line-height: 32px;
+  margin-bottom: 12px;
 
   @include mid-break {
     font-size: 22px;
     line-height: 30px;
+    margin-bottom: 12px;
   }
 }
 

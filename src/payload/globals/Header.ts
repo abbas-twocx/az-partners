@@ -18,5 +18,8 @@ export const Header: GlobalConfig = {
         }),
       ],
     },
+    link({
+        appearances: false,
+      }),
   ],
 }

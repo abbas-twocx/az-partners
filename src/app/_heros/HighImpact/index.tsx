@@ -3,41 +3,41 @@ import React, { Fragment } from 'react'
 import { Page } from '../../../payload/payload-types'
 import { Gutter } from '../../_components/Gutter'
 import { CMSLink } from '../../_components/Link'
-import { Media } from '../../_components/Media'
 import RichText from '../../_components/RichText'
 
 import classes from './index.module.scss'
 
 export const HighImpactHero: React.FC<Page['hero']> = ({ richText, media, links }) => {
+  const fileName = media?.filename || ''
+  const backgroundImageStyle =
+    media && typeof media === 'object'
+      ? {
+          backgroundImage: `url(${process.env.NEXT_PUBLIC_SERVER_URL}/media/${fileName})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }
+      : {}
+
   return (
-    <Gutter className={classes.hero}>
-      <div className={classes.content}>
-        <RichText content={richText} />
-        {Array.isArray(links) && links.length > 0 && (
-          <ul className={classes.links}>
-            {links.map(({ link }, i) => {
-              return (
+    <section className={classes.heroSection} style={backgroundImageStyle}>
+      <Gutter className={classes.hero}>
+        <div className={classes.content}>
+          <div className={classes.heroText}>
+            <RichText content={richText} />
+            {/* <h1>{heading || 'Hero Heading'}</h1>
+            <p>{subHeading || 'Hero Sub Heading'}</p> */}
+          </div>
+          {Array.isArray(links) && links.length > 0 && (
+            <ul className={classes.links}>
+              {links.map(({ link }, i) => (
                 <li key={i}>
                   <CMSLink {...link} />
                 </li>
-              )
-            })}
-          </ul>
-        )}
-      </div>
-      <div className={classes.media}>
-        {typeof media === 'object' && (
-          <Fragment>
-            <Media
-              resource={media}
-              // fill
-              imgClassName={classes.image}
-              priority
-            />
-            {media?.caption && <RichText content={media.caption} className={classes.caption} />}
-          </Fragment>
-        )}
-      </div>
-    </Gutter>
+              ))}
+            </ul>
+          )}
+        </div>
+      </Gutter>
+    </section>
   )
 }

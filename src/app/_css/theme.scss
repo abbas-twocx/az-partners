@@ -81,9 +81,14 @@
   --theme-elevation-950: var(--color-base-950);
   --theme-elevation-1000: var(--color-base-1000);
 
+  //BRAND COLOURS
+  --theme-brand-orange: rgba(241, 119, 32, 1);
+  --theme-brand-orange: rgb(241, 119, 32);
+  --theme-brand-white: rgb(255, 255, 255);
+
   --theme-bg: var(--theme-elevation-0);
   --theme-input-bg: var(--theme-elevation-50);
-  --theme-text: var(--theme-elevation-750);
+  --theme-text: rgba(0, 16, 102, 1);
   --theme-border-color: var(--theme-elevation-150);
 
   color-scheme: light;
@@ -199,6 +204,13 @@
   --theme-error-850: var(--color-error-150);
   --theme-error-900: var(--color-error-100);
   --theme-error-950: var(--color-error-50);
+
+  //BRAND COLOURS
+  --theme-brand-orange: rgb(241, 119, 32);
+  --theme-brand-blue: rgb(84, 137, 230);
+  --theme-brand-dark-blue: rgb(0, 16, 102);
+  --theme-brand-shadow-blue: rgb(3 10 47);
+  --theme-brand-white: rgb(255, 255, 255);
 
   --theme-bg: var(--theme-elevation-100);
   --theme-text: var(--theme-elevation-900);
