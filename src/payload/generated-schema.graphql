@@ -294,7 +294,7 @@ input Page_Hero_Media_where_or {
   OR: [Page_Hero_Media_where_or]
 }
 
-union Page_Layout = Cta | Content | MediaBlock | Archive | CardBlock | CardsWithImageBlock | OurValuesBlock
+union Page_Layout = Cta | Content | MediaBlock | Archive | CardBlock | CardsWithImageBlock | TextWithImageBlock | OurValuesBlock
 
 type Cta {
   invertBackground: Boolean
@@ -2186,6 +2186,176 @@ input CardsWithImageBlock_Cards_Media_where_or {
   OR: [CardsWithImageBlock_Cards_Media_where_or]
 }
 
+type TextWithImageBlock {
+  richText(depth: Int): JSON
+  media(where: TextWithImageBlock_Media_where): Media
+  id: String
+  blockName: String
+  blockType: String
+}
+
+input TextWithImageBlock_Media_where {
+  alt: TextWithImageBlock_Media_alt_operator
+  caption: TextWithImageBlock_Media_caption_operator
+  updatedAt: TextWithImageBlock_Media_updatedAt_operator
+  createdAt: TextWithImageBlock_Media_createdAt_operator
+  url: TextWithImageBlock_Media_url_operator
+  filename: TextWithImageBlock_Media_filename_operator
+  mimeType: TextWithImageBlock_Media_mimeType_operator
+  filesize: TextWithImageBlock_Media_filesize_operator
+  width: TextWithImageBlock_Media_width_operator
+  height: TextWithImageBlock_Media_height_operator
+  id: TextWithImageBlock_Media_id_operator
+  AND: [TextWithImageBlock_Media_where_and]
+  OR: [TextWithImageBlock_Media_where_or]
+}
+
+input TextWithImageBlock_Media_alt_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+}
+
+input TextWithImageBlock_Media_caption_operator {
+  equals: JSON
+  not_equals: JSON
+  like: JSON
+  contains: JSON
+  exists: Boolean
+}
+
+input TextWithImageBlock_Media_updatedAt_operator {
+  equals: DateTime
+  not_equals: DateTime
+  greater_than_equal: DateTime
+  greater_than: DateTime
+  less_than_equal: DateTime
+  less_than: DateTime
+  like: DateTime
+  exists: Boolean
+}
+
+input TextWithImageBlock_Media_createdAt_operator {
+  equals: DateTime
+  not_equals: DateTime
+  greater_than_equal: DateTime
+  greater_than: DateTime
+  less_than_equal: DateTime
+  less_than: DateTime
+  like: DateTime
+  exists: Boolean
+}
+
+input TextWithImageBlock_Media_url_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input TextWithImageBlock_Media_filename_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input TextWithImageBlock_Media_mimeType_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input TextWithImageBlock_Media_filesize_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input TextWithImageBlock_Media_width_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input TextWithImageBlock_Media_height_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input TextWithImageBlock_Media_id_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input TextWithImageBlock_Media_where_and {
+  alt: TextWithImageBlock_Media_alt_operator
+  caption: TextWithImageBlock_Media_caption_operator
+  updatedAt: TextWithImageBlock_Media_updatedAt_operator
+  createdAt: TextWithImageBlock_Media_createdAt_operator
+  url: TextWithImageBlock_Media_url_operator
+  filename: TextWithImageBlock_Media_filename_operator
+  mimeType: TextWithImageBlock_Media_mimeType_operator
+  filesize: TextWithImageBlock_Media_filesize_operator
+  width: TextWithImageBlock_Media_width_operator
+  height: TextWithImageBlock_Media_height_operator
+  id: TextWithImageBlock_Media_id_operator
+  AND: [TextWithImageBlock_Media_where_and]
+  OR: [TextWithImageBlock_Media_where_or]
+}
+
+input TextWithImageBlock_Media_where_or {
+  alt: TextWithImageBlock_Media_alt_operator
+  caption: TextWithImageBlock_Media_caption_operator
+  updatedAt: TextWithImageBlock_Media_updatedAt_operator
+  createdAt: TextWithImageBlock_Media_createdAt_operator
+  url: TextWithImageBlock_Media_url_operator
+  filename: TextWithImageBlock_Media_filename_operator
+  mimeType: TextWithImageBlock_Media_mimeType_operator
+  filesize: TextWithImageBlock_Media_filesize_operator
+  width: TextWithImageBlock_Media_width_operator
+  height: TextWithImageBlock_Media_height_operator
+  id: TextWithImageBlock_Media_id_operator
+  AND: [TextWithImageBlock_Media_where_and]
+  OR: [TextWithImageBlock_Media_where_or]
+}
+
 type OurValuesBlock {
   richText(depth: Int): JSON
   media(where: OurValuesBlock_Media_where): Media
@@ -3932,7 +4102,7 @@ input PageVersion_Version_Hero_Media_where_or {
   OR: [PageVersion_Version_Hero_Media_where_or]
 }
 
-union PageVersion_Version_Layout = Cta | Content | MediaBlock | Archive | CardBlock | CardsWithImageBlock | OurValuesBlock
+union PageVersion_Version_Layout = Cta | Content | MediaBlock | Archive | CardBlock | CardsWithImageBlock | TextWithImageBlock | OurValuesBlock
 
 type PageVersion_Version_Meta {
   title: String

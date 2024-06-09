@@ -13,6 +13,7 @@ import { VerticalPadding, VerticalPaddingOptions } from '../VerticalPadding'
 import { CardBlock } from '../../_blocks/CardBlock'
 import { OurValuesBlock } from '../../_blocks/OurValuesBlock'
 import { CardsWithImageBlock } from '../../_blocks/CardsWithImageBlock'
+import TextWithImageBlock from '../../_blocks/TextWithImageBlock'
 
 const blockComponents = {
   cta: CallToActionBlock,
@@ -23,6 +24,7 @@ const blockComponents = {
   comments: CommentsBlock,
   cardBlock: CardBlock,
   cardsWithImageBlock: CardsWithImageBlock,
+  textWithImageBlock: TextWithImageBlock,
   ourValuesBlock: OurValuesBlock
 }
 

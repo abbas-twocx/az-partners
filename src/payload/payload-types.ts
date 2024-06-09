@@ -202,6 +202,15 @@ export interface Page {
           [k: string]: unknown;
         }[];
         media: string | Media;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'textWithImageBlock';
+      }
+    | {
+        richText: {
+          [k: string]: unknown;
+        }[];
+        media: string | Media;
         cards?:
           | {
               media?: string | Media | null;

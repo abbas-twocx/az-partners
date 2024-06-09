@@ -110,6 +110,13 @@ export const CARDS_WITH_IMAGE_BLOCK = `
   }
 }
 `
+export const TEXT_WITH_IMAGE_BLOCK = `
+...on TextWithImageBlock {
+  blockType
+  richText
+  ${MEDIA}
+}
+`
 export const OUR_VALUES_BLOCK = `
 ...on OurValuesBlock {
   blockType

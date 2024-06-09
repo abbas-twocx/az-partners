@@ -1,4 +1,13 @@
-import { ARCHIVE_BLOCK, CALL_TO_ACTION, CARD_BLOCK, CARDS_WITH_IMAGE_BLOCK, CONTENT, MEDIA_BLOCK, OUR_VALUES_BLOCK } from './blocks'
+import {
+  ARCHIVE_BLOCK,
+  CALL_TO_ACTION,
+  CARD_BLOCK,
+  CARDS_WITH_IMAGE_BLOCK,
+  CONTENT,
+  MEDIA_BLOCK,
+  OUR_VALUES_BLOCK,
+  TEXT_WITH_IMAGE_BLOCK,
+} from './blocks'
 import { LINK_FIELDS } from './link'
 import { MEDIA } from './media'
 import { META } from './meta'
@@ -36,6 +45,7 @@ export const PAGE = `
           ${CARD_BLOCK}
           ${OUR_VALUES_BLOCK}
           ${CARDS_WITH_IMAGE_BLOCK}
+          ${TEXT_WITH_IMAGE_BLOCK}
         }
         ${META}
       }
