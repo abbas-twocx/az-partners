@@ -13,6 +13,13 @@ export const CallToAction: Block = {
   fields: [
     invertBackground,
     richText(),
+    {
+      name: 'media',
+      type: 'upload',
+      relationTo: 'media',
+      required: true,
+      label: 'Call to Action Banner',
+    },
     linkGroup({
       appearances: ['primary', 'secondary'],
       overrides: {

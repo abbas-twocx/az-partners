@@ -299,10 +299,173 @@ union Page_Layout = Cta | Content | MediaBlock | Archive | CardBlock | CardsWith
 type Cta {
   invertBackground: Boolean
   richText(depth: Int): JSON
+  media(where: Cta_Media_where): Media
   links: [Cta_Links!]
   id: String
   blockName: String
   blockType: String
+}
+
+input Cta_Media_where {
+  alt: Cta_Media_alt_operator
+  caption: Cta_Media_caption_operator
+  updatedAt: Cta_Media_updatedAt_operator
+  createdAt: Cta_Media_createdAt_operator
+  url: Cta_Media_url_operator
+  filename: Cta_Media_filename_operator
+  mimeType: Cta_Media_mimeType_operator
+  filesize: Cta_Media_filesize_operator
+  width: Cta_Media_width_operator
+  height: Cta_Media_height_operator
+  id: Cta_Media_id_operator
+  AND: [Cta_Media_where_and]
+  OR: [Cta_Media_where_or]
+}
+
+input Cta_Media_alt_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+}
+
+input Cta_Media_caption_operator {
+  equals: JSON
+  not_equals: JSON
+  like: JSON
+  contains: JSON
+  exists: Boolean
+}
+
+input Cta_Media_updatedAt_operator {
+  equals: DateTime
+  not_equals: DateTime
+  greater_than_equal: DateTime
+  greater_than: DateTime
+  less_than_equal: DateTime
+  less_than: DateTime
+  like: DateTime
+  exists: Boolean
+}
+
+input Cta_Media_createdAt_operator {
+  equals: DateTime
+  not_equals: DateTime
+  greater_than_equal: DateTime
+  greater_than: DateTime
+  less_than_equal: DateTime
+  less_than: DateTime
+  like: DateTime
+  exists: Boolean
+}
+
+input Cta_Media_url_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Cta_Media_filename_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Cta_Media_mimeType_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Cta_Media_filesize_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Cta_Media_width_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Cta_Media_height_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input Cta_Media_id_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input Cta_Media_where_and {
+  alt: Cta_Media_alt_operator
+  caption: Cta_Media_caption_operator
+  updatedAt: Cta_Media_updatedAt_operator
+  createdAt: Cta_Media_createdAt_operator
+  url: Cta_Media_url_operator
+  filename: Cta_Media_filename_operator
+  mimeType: Cta_Media_mimeType_operator
+  filesize: Cta_Media_filesize_operator
+  width: Cta_Media_width_operator
+  height: Cta_Media_height_operator
+  id: Cta_Media_id_operator
+  AND: [Cta_Media_where_and]
+  OR: [Cta_Media_where_or]
+}
+
+input Cta_Media_where_or {
+  alt: Cta_Media_alt_operator
+  caption: Cta_Media_caption_operator
+  updatedAt: Cta_Media_updatedAt_operator
+  createdAt: Cta_Media_createdAt_operator
+  url: Cta_Media_url_operator
+  filename: Cta_Media_filename_operator
+  mimeType: Cta_Media_mimeType_operator
+  filesize: Cta_Media_filesize_operator
+  width: Cta_Media_width_operator
+  height: Cta_Media_height_operator
+  id: Cta_Media_id_operator
+  AND: [Cta_Media_where_and]
+  OR: [Cta_Media_where_or]
 }
 
 type Cta_Links {

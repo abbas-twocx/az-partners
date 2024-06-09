@@ -2,27 +2,35 @@
 
 $spacer-h: calc(var(--block-padding) / 2);
 
+.ctaSectionWrapper {
+  background-color: var(--theme-brand-shadow-blue);
+  color: var(--theme-elevation-0);
+  padding-top: 60px;
+}
+
 .callToAction {
   padding-left: $spacer-h;
   padding-right: $spacer-h;
   position: relative;
-  background-color: var(--theme-elevation-100);
-  color: var(--theme-elevation-1000);
+
+  @include mid-break {
+    padding: $spacer-h;
+  }
 }
 
-:global([data-theme="dark"]) {
-  .callToAction {
+:global([data-theme='dark']) {
+  .ctaSectionWrapper {
     background-color: var(--theme-elevation-0);
     color: var(--theme-elevation-1000);
   }
 }
 
 .invert {
-  background-color: var(--theme-elevation-1000);
-  color: var(--theme-elevation-0);
+  background-color: var(--theme-elevation-100);
+  color: var(--theme-elevation-1000);
 }
 
-:global([data-theme="dark"]) {
+:global([data-theme='dark']) {
   .invert {
     background-color: var(--theme-elevation-900);
     color: var(--theme-elevation-0);
@@ -36,26 +44,55 @@ $spacer-h: calc(var(--block-padding) / 2);
 
   @include mid-break {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 }
 
 .content {
-  flex-grow: 1;
+  flex: 1;
+  max-width: 100%;
+  text-align: left;
+
+  @include mid-break {
+    text-align: left;
+  }
 }
 
 .linkGroup {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: $spacer-h;
   flex-shrink: 0;
+  margin-top: 32px;
 
-  > * {
-    margin-bottom: calc(var(--base) / 2);
+  >* {
+    margin-bottom: 0;
+  }
+}
 
-    &:last-child {
-      margin-bottom: 0;
-    }
+.imageWrapper {
+  flex: 1;
+  max-width: 100%;
+  height: 100%;
+  max-height: 710px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  @include mid-break {
+    width: 100%;
+  }
+}
+
+.image {
+  height: 710px;
+  max-height: 711px;
+  object-fit: contain;
+  object-position: center;
+
+  @include mid-break {
+    margin-top: $spacer-h;
   }
 }
