@@ -1,13 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
 
-import { Footer } from '../../../payload/payload-types'
-import { fetchFooter, fetchGlobals } from '../../_api/fetchGlobals'
+import { Footer, Settings } from '../../../payload/payload-types'
+import { fetchFooter, fetchSettings } from '../../_api/fetchGlobals'
 import { ThemeSelector } from '../../_providers/Theme/ThemeSelector'
 import { Gutter } from '../Gutter'
 import { CMSLink } from '../Link'
 
 import classes from './index.module.scss'
+import Image from 'next/image'
 
 export async function Footer() {
   let footer: Footer | null = null
@@ -15,43 +16,47 @@ export async function Footer() {
   try {
     footer = await fetchFooter()
   } catch (error) {
-    // When deploying this template on Payload Cloud, this page needs to build before the APIs are live
-    // So swallow the error here and simply render the footer without nav items if one occurs
-    // in production you may want to redirect to a 404  page or at least log the error somewhere
-    // console.error(error)
+    console.error(error)
   }
 
-  const navItems = footer?.navItems || []
+  const navItemsGroup = footer?.navItemsGroup || []
+  const footerSocials = footer?.footerSocials || []
+  const shortFooterText = footer?.shortFooterText || ''
+  const copyrightText = footer?.copyrightText || ''
 
   return (
     <footer className={classes.footer}>
       <Gutter className={classes.wrap}>
-        <Link href="/">
-          <picture>
-            <img
-              className={classes.logo}
-              alt="Payload Logo"
-              src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/payload/src/admin/assets/images/payload-logo-light.svg"
-            />
-          </picture>
-        </Link>
+        {/* Short footer text */}
+        <div className={classes.shortText}>{shortFooterText}</div>
+
+        {/* Footer links */}
         <nav className={classes.nav}>
-          <ThemeSelector />
-          {navItems.map(({ link }, i) => {
-            return <CMSLink key={i} {...link} />
-          })}
-          <Link href="/admin">Admin</Link>
-          <Link
-            href="https://github.com/payloadcms/payload/tree/main/templates/website"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Source Code
-          </Link>
-          <Link href="https://payloadcms.com" target="_blank" rel="noopener noreferrer">
-            Payload
-          </Link>
+          {navItemsGroup.map(({ navGroupName, navItems }, i) => (
+            <div key={i} className={classes.column}>
+              <h3 className={classes.namGroupName}>{navGroupName}</h3>
+              {navItems.map((navItem, j) => (
+                <CMSLink key={j} {...navItem} />
+              ))}
+            </div>
+          ))}
         </nav>
+
+        {/* Footer socials */}
+        <div className={classes.socials}>
+          {footerSocials.map((social, i) => (
+            <Image
+              key={i}
+              src={`${process.env.NEXT_PUBLIC_SERVER_URL}/media/${social.media.filename}`}
+              alt={social.media.alt || 'Social Media Icon'}
+              width={32}
+              height={32}
+            />
+          ))}
+        </div>
+
+        {/* Copyright */}
+        <div className={classes.copyright}>{copyrightText}</div>
       </Gutter>
     </footer>
   )

@@ -1,5 +1,5 @@
 import { LINK_FIELDS } from './link'
-import { MEDIA_FIELDS } from './media'
+import { MEDIA, MEDIA_FIELDS } from './media'
 
 export const HEADER = `
   Header {
@@ -18,9 +18,17 @@ query Header {
 
 export const FOOTER = `
   Footer {
+  shortFooterText
+  navItemsGroup {
+    navGroupName
     navItems {
       link ${LINK_FIELDS({ disableAppearance: true })}
 		}
+  }
+  footerSocials {
+    ${MEDIA}
+  }
+  copyrightText
   }
 `
 

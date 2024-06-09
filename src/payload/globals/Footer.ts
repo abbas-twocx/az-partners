@@ -9,14 +9,52 @@ export const Footer: GlobalConfig = {
   },
   fields: [
     {
-      name: 'navItems',
+      name: 'shortFooterText',
+      type: 'textarea',
+      label: 'Short Footer Text',
+    },
+    {
+      name: 'navItemsGroup',
       type: 'array',
-      maxRows: 6,
+      label: 'Navigations Group',
+      maxRows: 4,
       fields: [
-        link({
-          appearances: false,
-        }),
+        {
+          name: 'navGroupName',
+          type: 'text',
+          label: 'Navigation Group Name',
+          required: true,
+        },
+        {
+          name: 'navItems',
+          type: 'array',
+          fields: [
+            link({
+              appearances: false,
+            }),
+          ],
+        },
       ],
+    },
+    {
+      name: 'footerSocials',
+      type: 'array',
+      label: 'Footer Socials',
+      maxRows: 4,
+      fields: [
+        {
+          name: 'media',
+          type: 'upload',
+          relationTo: 'media',
+          label: 'Social Icon',
+        },
+      ],
+    },
+    {
+      name: 'copyrightText',
+      type: 'textarea',
+      label: 'Copyright Text',
+      required: true,
     },
   ],
 }

@@ -1,3 +1,4 @@
+
 @use '../../_css/queries.scss' as *;
 
 .footer {
@@ -24,20 +25,45 @@
   gap: calc(var(--base) / 2) var(--base);
 }
 
-.logo {
-  width: 150px;
+.shortText {
+  flex: 1 1 100%;
+  margin-bottom: 20px;
 }
 
 .nav {
   display: flex;
   gap: calc(var(--base) / 4) var(--base);
-  align-items: center;
+  flex: 2 1 100%;
   flex-wrap: wrap;
-  opacity: 1;
-  transition: opacity 100ms linear;
-  visibility: visible;
+}
 
-  > * {
-    text-decoration: none;
+.column {
+  flex: 1;
+}
+
+.namGroupName {
+  margin-bottom: 10px;
+}
+
+.socials {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+}
+
+.socials img {
+  width: 32px;
+  height: 32px;
+}
+
+@media screen and (max-width: $breakpoint-m-width) {
+  .column {
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (max-width: $breakpoint-s-width) {
+  .column {
+    flex-basis: 100%;
   }
 }
