@@ -5,21 +5,22 @@
   width: 100%;
   background-size: cover;
   background-position: center;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-
-  @include small-break {
-    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
-  }
+  background-color: var(--theme-brand-shadow-blue);
 }
 
 .cardsWithContent {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 32px;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 140px;
+  padding-bottom: 200px;
   min-height: 620px;
+  position: relative;
+
+  @include mid-break {
+    flex-direction: column;
+    align-items: center;
+  }
 
   .content {
     text-align: center;
@@ -35,20 +36,54 @@
     color: var(--theme-brand-blue);
   }
 
-  .cardsWrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    width: 100%;
-    max-width: 1100px;
+  .leftSection {
+    flex: 1;
+    max-width: 980px;
+    max-height: 990px;
+    height: 990px;
 
-    @include large-break {
-      grid-template-columns: repeat(3, 1fr);
+    .image {
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 24px;
     }
 
     @include mid-break {
-      grid-template-columns: repeat(2, 1fr);
+      max-width: 100%;
+      margin-bottom: 20px;
     }
+  }
+
+  .rightSection {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-25%);
+    flex: 2;
+    background: var(--theme-brand-white);
+    padding: 60px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    @include mid-break {
+      position: static;
+      transform: none;
+      background: none;
+      box-shadow: none;
+    }
+  }
+
+  .richText {
+    margin-bottom: 40px;
+  }
+
+  .cardsWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+    max-width: 1100px;
 
     @include small-break {
       grid-template-columns: 1fr;
@@ -57,7 +92,7 @@
 
   .card {
     background-color: white;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -65,7 +100,7 @@
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     align-items: center;
 
     &:hover {
@@ -91,5 +126,10 @@
         line-height: 1.5;
       }
     }
+  }
+
+  .cardImage {
+    width: 80px;
+    height: 80px;
   }
 }

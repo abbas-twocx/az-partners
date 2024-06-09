@@ -1686,9 +1686,341 @@ union CardBlock_Cards_Link_Reference = Page
 
 type CardsWithImageBlock {
   richText(depth: Int): JSON
+  media(where: CardsWithImageBlock_Media_where): Media
+  cards: [CardsWithImageBlock_Cards!]
   id: String
   blockName: String
   blockType: String
+}
+
+input CardsWithImageBlock_Media_where {
+  alt: CardsWithImageBlock_Media_alt_operator
+  caption: CardsWithImageBlock_Media_caption_operator
+  updatedAt: CardsWithImageBlock_Media_updatedAt_operator
+  createdAt: CardsWithImageBlock_Media_createdAt_operator
+  url: CardsWithImageBlock_Media_url_operator
+  filename: CardsWithImageBlock_Media_filename_operator
+  mimeType: CardsWithImageBlock_Media_mimeType_operator
+  filesize: CardsWithImageBlock_Media_filesize_operator
+  width: CardsWithImageBlock_Media_width_operator
+  height: CardsWithImageBlock_Media_height_operator
+  id: CardsWithImageBlock_Media_id_operator
+  AND: [CardsWithImageBlock_Media_where_and]
+  OR: [CardsWithImageBlock_Media_where_or]
+}
+
+input CardsWithImageBlock_Media_alt_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+}
+
+input CardsWithImageBlock_Media_caption_operator {
+  equals: JSON
+  not_equals: JSON
+  like: JSON
+  contains: JSON
+  exists: Boolean
+}
+
+input CardsWithImageBlock_Media_updatedAt_operator {
+  equals: DateTime
+  not_equals: DateTime
+  greater_than_equal: DateTime
+  greater_than: DateTime
+  less_than_equal: DateTime
+  less_than: DateTime
+  like: DateTime
+  exists: Boolean
+}
+
+input CardsWithImageBlock_Media_createdAt_operator {
+  equals: DateTime
+  not_equals: DateTime
+  greater_than_equal: DateTime
+  greater_than: DateTime
+  less_than_equal: DateTime
+  less_than: DateTime
+  like: DateTime
+  exists: Boolean
+}
+
+input CardsWithImageBlock_Media_url_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input CardsWithImageBlock_Media_filename_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input CardsWithImageBlock_Media_mimeType_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input CardsWithImageBlock_Media_filesize_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input CardsWithImageBlock_Media_width_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input CardsWithImageBlock_Media_height_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input CardsWithImageBlock_Media_id_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input CardsWithImageBlock_Media_where_and {
+  alt: CardsWithImageBlock_Media_alt_operator
+  caption: CardsWithImageBlock_Media_caption_operator
+  updatedAt: CardsWithImageBlock_Media_updatedAt_operator
+  createdAt: CardsWithImageBlock_Media_createdAt_operator
+  url: CardsWithImageBlock_Media_url_operator
+  filename: CardsWithImageBlock_Media_filename_operator
+  mimeType: CardsWithImageBlock_Media_mimeType_operator
+  filesize: CardsWithImageBlock_Media_filesize_operator
+  width: CardsWithImageBlock_Media_width_operator
+  height: CardsWithImageBlock_Media_height_operator
+  id: CardsWithImageBlock_Media_id_operator
+  AND: [CardsWithImageBlock_Media_where_and]
+  OR: [CardsWithImageBlock_Media_where_or]
+}
+
+input CardsWithImageBlock_Media_where_or {
+  alt: CardsWithImageBlock_Media_alt_operator
+  caption: CardsWithImageBlock_Media_caption_operator
+  updatedAt: CardsWithImageBlock_Media_updatedAt_operator
+  createdAt: CardsWithImageBlock_Media_createdAt_operator
+  url: CardsWithImageBlock_Media_url_operator
+  filename: CardsWithImageBlock_Media_filename_operator
+  mimeType: CardsWithImageBlock_Media_mimeType_operator
+  filesize: CardsWithImageBlock_Media_filesize_operator
+  width: CardsWithImageBlock_Media_width_operator
+  height: CardsWithImageBlock_Media_height_operator
+  id: CardsWithImageBlock_Media_id_operator
+  AND: [CardsWithImageBlock_Media_where_and]
+  OR: [CardsWithImageBlock_Media_where_or]
+}
+
+type CardsWithImageBlock_Cards {
+  media(where: CardsWithImageBlock_Cards_Media_where): Media
+  cardContent(depth: Int): JSON
+  id: String
+}
+
+input CardsWithImageBlock_Cards_Media_where {
+  alt: CardsWithImageBlock_Cards_Media_alt_operator
+  caption: CardsWithImageBlock_Cards_Media_caption_operator
+  updatedAt: CardsWithImageBlock_Cards_Media_updatedAt_operator
+  createdAt: CardsWithImageBlock_Cards_Media_createdAt_operator
+  url: CardsWithImageBlock_Cards_Media_url_operator
+  filename: CardsWithImageBlock_Cards_Media_filename_operator
+  mimeType: CardsWithImageBlock_Cards_Media_mimeType_operator
+  filesize: CardsWithImageBlock_Cards_Media_filesize_operator
+  width: CardsWithImageBlock_Cards_Media_width_operator
+  height: CardsWithImageBlock_Cards_Media_height_operator
+  id: CardsWithImageBlock_Cards_Media_id_operator
+  AND: [CardsWithImageBlock_Cards_Media_where_and]
+  OR: [CardsWithImageBlock_Cards_Media_where_or]
+}
+
+input CardsWithImageBlock_Cards_Media_alt_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+}
+
+input CardsWithImageBlock_Cards_Media_caption_operator {
+  equals: JSON
+  not_equals: JSON
+  like: JSON
+  contains: JSON
+  exists: Boolean
+}
+
+input CardsWithImageBlock_Cards_Media_updatedAt_operator {
+  equals: DateTime
+  not_equals: DateTime
+  greater_than_equal: DateTime
+  greater_than: DateTime
+  less_than_equal: DateTime
+  less_than: DateTime
+  like: DateTime
+  exists: Boolean
+}
+
+input CardsWithImageBlock_Cards_Media_createdAt_operator {
+  equals: DateTime
+  not_equals: DateTime
+  greater_than_equal: DateTime
+  greater_than: DateTime
+  less_than_equal: DateTime
+  less_than: DateTime
+  like: DateTime
+  exists: Boolean
+}
+
+input CardsWithImageBlock_Cards_Media_url_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input CardsWithImageBlock_Cards_Media_filename_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input CardsWithImageBlock_Cards_Media_mimeType_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input CardsWithImageBlock_Cards_Media_filesize_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input CardsWithImageBlock_Cards_Media_width_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input CardsWithImageBlock_Cards_Media_height_operator {
+  equals: Float
+  not_equals: Float
+  greater_than_equal: Float
+  greater_than: Float
+  less_than_equal: Float
+  less_than: Float
+  exists: Boolean
+}
+
+input CardsWithImageBlock_Cards_Media_id_operator {
+  equals: String
+  not_equals: String
+  like: String
+  contains: String
+  in: [String]
+  not_in: [String]
+  all: [String]
+  exists: Boolean
+}
+
+input CardsWithImageBlock_Cards_Media_where_and {
+  alt: CardsWithImageBlock_Cards_Media_alt_operator
+  caption: CardsWithImageBlock_Cards_Media_caption_operator
+  updatedAt: CardsWithImageBlock_Cards_Media_updatedAt_operator
+  createdAt: CardsWithImageBlock_Cards_Media_createdAt_operator
+  url: CardsWithImageBlock_Cards_Media_url_operator
+  filename: CardsWithImageBlock_Cards_Media_filename_operator
+  mimeType: CardsWithImageBlock_Cards_Media_mimeType_operator
+  filesize: CardsWithImageBlock_Cards_Media_filesize_operator
+  width: CardsWithImageBlock_Cards_Media_width_operator
+  height: CardsWithImageBlock_Cards_Media_height_operator
+  id: CardsWithImageBlock_Cards_Media_id_operator
+  AND: [CardsWithImageBlock_Cards_Media_where_and]
+  OR: [CardsWithImageBlock_Cards_Media_where_or]
+}
+
+input CardsWithImageBlock_Cards_Media_where_or {
+  alt: CardsWithImageBlock_Cards_Media_alt_operator
+  caption: CardsWithImageBlock_Cards_Media_caption_operator
+  updatedAt: CardsWithImageBlock_Cards_Media_updatedAt_operator
+  createdAt: CardsWithImageBlock_Cards_Media_createdAt_operator
+  url: CardsWithImageBlock_Cards_Media_url_operator
+  filename: CardsWithImageBlock_Cards_Media_filename_operator
+  mimeType: CardsWithImageBlock_Cards_Media_mimeType_operator
+  filesize: CardsWithImageBlock_Cards_Media_filesize_operator
+  width: CardsWithImageBlock_Cards_Media_width_operator
+  height: CardsWithImageBlock_Cards_Media_height_operator
+  id: CardsWithImageBlock_Cards_Media_id_operator
+  AND: [CardsWithImageBlock_Cards_Media_where_and]
+  OR: [CardsWithImageBlock_Cards_Media_where_or]
 }
 
 type OurValuesBlock {

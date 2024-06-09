@@ -101,6 +101,12 @@ export const CARDS_WITH_IMAGE_BLOCK = `
 ...on CardsWithImageBlock {
   blockType
   richText
+  ${MEDIA}
+  cards {
+    id
+    ${MEDIA}
+    cardContent
+  }
 }
 `
 export const OUR_VALUES_BLOCK = `
