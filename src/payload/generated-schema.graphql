@@ -294,7 +294,7 @@ input Page_Hero_Media_where_or {
   OR: [Page_Hero_Media_where_or]
 }
 
-union Page_Layout = Cta | Content | MediaBlock | Archive | CardBlock | OurValuesBlock
+union Page_Layout = Cta | Content | MediaBlock | Archive | CardBlock | CardsWithImageBlock | OurValuesBlock
 
 type Cta {
   invertBackground: Boolean
@@ -1683,6 +1683,13 @@ enum CardBlock_Cards_Link_Reference_RelationTo {
 }
 
 union CardBlock_Cards_Link_Reference = Page
+
+type CardsWithImageBlock {
+  richText(depth: Int): JSON
+  id: String
+  blockName: String
+  blockType: String
+}
 
 type OurValuesBlock {
   richText(depth: Int): JSON
@@ -3430,7 +3437,7 @@ input PageVersion_Version_Hero_Media_where_or {
   OR: [PageVersion_Version_Hero_Media_where_or]
 }
 
-union PageVersion_Version_Layout = Cta | Content | MediaBlock | Archive | CardBlock | OurValuesBlock
+union PageVersion_Version_Layout = Cta | Content | MediaBlock | Archive | CardBlock | CardsWithImageBlock | OurValuesBlock
 
 type PageVersion_Version_Meta {
   title: String

@@ -182,6 +182,14 @@ export interface Page {
         richText: {
           [k: string]: unknown;
         }[];
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'cardsWithImageBlock';
+      }
+    | {
+        richText: {
+          [k: string]: unknown;
+        }[];
         media: string | Media;
         cards?:
           | {

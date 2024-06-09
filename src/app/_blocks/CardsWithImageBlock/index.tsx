@@ -4,19 +4,19 @@ import { Page } from '../../../payload/payload-types'
 import { Gutter } from '../../_components/Gutter'
 import RichText from '../../_components/RichText'
 
+
 import classes from './index.module.scss'
 
-type Props = Extract<Page['layout'][0], { blockType: 'OurValuesBlock' }>
 
-export const OurValuesBlock: React.FC<
+
+type Props = Extract<Page['layout'][0], { blockType: 'cardsWithImageBlock' }>
+
+export const CardsWithImageBlock: React.FC<
   Props & {
     id?: string
   }
-> = ({ richText, media, cards }) => {
+> = ({ richText }) => {
 
-  console.log('OUR VALUES: ', richText);
-  
-  
   return (
     <section className={classes.cardParentWrapper}>
       <Gutter className={classes.cardsWithContent}>

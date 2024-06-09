@@ -97,16 +97,15 @@ export const CARD_BLOCK = `
   }
 }
 `
+export const CARDS_WITH_IMAGE_BLOCK = `
+...on CardsWithImageBlock {
+  blockType
+  richText
+}
+`
 export const OUR_VALUES_BLOCK = `
 ...on OurValuesBlock {
   blockType
   richText
-  ${MEDIA}
-  cards {
-    id
-    ${MEDIA}
-    cardContent
-    link ${LINK_FIELDS({ disableAppearance: true  })}
-  }
 }
 `

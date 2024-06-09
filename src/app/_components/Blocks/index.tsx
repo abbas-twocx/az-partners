@@ -12,6 +12,7 @@ import { BackgroundColor } from '../BackgroundColor'
 import { VerticalPadding, VerticalPaddingOptions } from '../VerticalPadding'
 import { CardBlock } from '../../_blocks/CardBlock'
 import { OurValuesBlock } from '../../_blocks/OurValuesBlock'
+import { CardsWithImageBlock } from '../../_blocks/CardsWithImageBlock'
 
 const blockComponents = {
   cta: CallToActionBlock,
@@ -21,6 +22,7 @@ const blockComponents = {
   relatedPosts: RelatedPosts,
   comments: CommentsBlock,
   cardBlock: CardBlock,
+  cardsWithImageBlock: CardsWithImageBlock,
   ourValuesBlock: OurValuesBlock
 }
 
@@ -31,6 +33,7 @@ export const Blocks: React.FC<{
   const { disableTopPadding, blocks } = props
 
   const hasBlocks = blocks && Array.isArray(blocks) && blocks.length > 0
+  
 
   if (hasBlocks) {
     return (
