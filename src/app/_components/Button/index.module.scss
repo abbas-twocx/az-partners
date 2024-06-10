@@ -14,13 +14,13 @@
   font-weight: 600;
   font-size: 16px;
   border-radius: 10px;
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; // Add transition for opacity and transform
+  // transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; // Add transition for opacity and transform
 }
 
-.button:hover {
-  opacity: 80%;
-  transform: scale(1.05);
-}
+// .button:hover {
+//   opacity: 80%;
+//   transform: scale(1.05); 
+// }
 
 .content {
   display: flex;
@@ -42,14 +42,38 @@
 }
 
 .appearance--primary {
-  background-color: var(--theme-brand-orange);
+  background: linear-gradient(to bottom, #0B3FC5, #146EF5);
   color: var(--theme-brand-white) !important;
+  box-shadow:
+    inset -6px 6px 6px rgba(225, 225, 225, 0.08),
+    inset -4.5px -4.5px 7.5px rgba(225, 225, 225, 0.22),
+    inset 6px 6px 12px rgba(0, 0, 0, 0.4),
+    0 3px 6px rgba(0, 0, 0, 0.33);
+  transition: background 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.appearance--primary:hover {
+  background: linear-gradient(to bottom, #0A36B5, #135BE5);
+  box-shadow:
+    inset -6px 6px 8px rgba(225, 225, 225, 0.1),
+    inset -5px -5px 9px rgba(225, 225, 225, 0.25),
+    inset 7px 7px 14px rgba(0, 0, 0, 0.45),
+    0 4px 8px rgba(0, 0, 0, 0.35);
 }
 
 .appearance--secondary {
   background-color: transparent;
-  box-shadow: inset 0 0 0 1px var(--theme-brand-orange);
-  color: var(--theme-brand-orange);
+  border: 1px solid var(--theme-brand-border-gray);
+  color: var(--theme-brand-border-gray);
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.appearance--secondary:hover {
+  background-color: var(--theme-brand-border-gray);
+  border-color: transparent;
+  color: white;
 }
 
 .primary--invert {

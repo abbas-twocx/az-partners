@@ -92,6 +92,7 @@ h6 {
 
 p {
   margin: 0;
+  @extend %body;
 
   @include mid-break {
     margin: 0;

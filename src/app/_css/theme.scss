@@ -89,8 +89,14 @@
 
   --theme-bg: var(--theme-elevation-0);
   --theme-input-bg: var(--theme-elevation-50);
-  --theme-text: rgba(0, 16, 102, 1);
+  --theme-text: rgb(0, 0, 0);
+  --theme-brand-gray: rgb(90, 106, 131);
+  --theme-brand-border-gray: rgb(87, 87, 87);
+  --theme-brand-outline: rgb(214, 218, 224);
   --theme-border-color: var(--theme-elevation-150);
+
+  //BRAND BACKGROUND COLORS
+  --theme-brand-background: rgb(230, 237, 248);
 
   color-scheme: light;
   color: var(--theme-text);

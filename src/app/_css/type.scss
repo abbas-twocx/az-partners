@@ -14,7 +14,7 @@
 
 %h1 {
   margin: 0;
-  font-size: 76px;
+  font-size: 62px;
   line-height: 100%;
   font-weight: bold;
   margin-bottom: 24px;
@@ -29,7 +29,7 @@
 
 %h2 {
   margin: 0;
-  font-size: 62px;
+  font-size: 48px;
   line-height: 110%;
   font-weight: bold;
   margin-bottom: 24px;
@@ -103,6 +103,7 @@
   font-size: 18px;
   line-height: 32px;
   margin-bottom: 12px;
+  color: var(--theme-brand-gray);
 
   @include mid-break {
     font-size: 15px;
@@ -115,6 +116,7 @@
   font-size: 25px;
   line-height: 32px;
   margin-bottom: 12px;
+  color: var(--theme-brand-gray);
 
   @include mid-break {
     font-size: 22px;
