@@ -210,6 +210,32 @@ export interface Page {
         richText: {
           [k: string]: unknown;
         }[];
+        link: {
+          type?: ('reference' | 'custom') | null;
+          newTab?: boolean | null;
+          reference?: {
+            relationTo: 'pages';
+            value: string | Page;
+          } | null;
+          url?: string | null;
+          label: string;
+          appearance?: ('default' | 'primary' | 'secondary') | null;
+        };
+        cards?:
+          | {
+              heading: string;
+              description: string;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'ourProcessBlock';
+      }
+    | {
+        richText: {
+          [k: string]: unknown;
+        }[];
         media: string | Media;
         cards?:
           | {
@@ -778,21 +804,35 @@ export interface Header {
 }
 export interface Footer {
   id: string;
-  navItems?:
+  shortFooterText?: string | null;
+  navItemsGroup?:
     | {
-        link: {
-          type?: ('reference' | 'custom') | null;
-          newTab?: boolean | null;
-          reference?: {
-            relationTo: 'pages';
-            value: string | Page;
-          } | null;
-          url?: string | null;
-          label: string;
-        };
+        navGroupName: string;
+        navItems?:
+          | {
+              link: {
+                type?: ('reference' | 'custom') | null;
+                newTab?: boolean | null;
+                reference?: {
+                  relationTo: 'pages';
+                  value: string | Page;
+                } | null;
+                url?: string | null;
+                label: string;
+              };
+              id?: string | null;
+            }[]
+          | null;
         id?: string | null;
       }[]
     | null;
+  footerSocials?:
+    | {
+        media?: string | Media | null;
+        id?: string | null;
+      }[]
+    | null;
+  copyrightText: string;
   updatedAt?: string | null;
   createdAt?: string | null;
 }

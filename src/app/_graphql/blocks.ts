@@ -110,6 +110,18 @@ export const CARDS_WITH_IMAGE_BLOCK = `
   }
 }
 `
+export const OUR_PROCESS_BLOCK = `
+...on OurProcessBlock {
+  blockType
+  richText
+  link ${LINK_FIELDS({ disableAppearance: true  })}
+  cards {
+    id
+    heading
+    description
+  }
+}
+`
 export const TEXT_WITH_IMAGE_BLOCK = `
 ...on TextWithImageBlock {
   blockType
