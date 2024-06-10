@@ -8,7 +8,6 @@ export const CALL_TO_ACTION = `
   blockType
   invertBackground
   richText
-  ${MEDIA}
   links {
     link ${LINK_FIELDS()}
   }
