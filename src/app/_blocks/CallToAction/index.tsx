@@ -29,9 +29,9 @@ export const CallToActionBlock: React.FC<
           </div>
         </div>
       </Gutter>
-      <div className={classes.ctaSvgWrapper}>
+      {/* <div className={classes.ctaSvgWrapper}>
         <CtaSvg />
-      </div>
+      </div> */}
     </section>
   )
 }

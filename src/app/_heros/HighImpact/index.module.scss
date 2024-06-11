@@ -27,6 +27,7 @@
 
   @include mid-break {
     padding-top: var(--gutter-h);
+    flex-direction: column;
   }
 }
 
@@ -51,11 +52,16 @@
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  // margin: calc(var(--base) * -.5);
 
-  // &>* {
-  //   margin: calc(var(--base) / 2);
-  // }
+  @include small-break {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include mid-break {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .imageWrapper {
@@ -95,6 +101,21 @@
   width: 100%;
   max-width: 60%;
   z-index: 1;
+
+  @include small-break {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  @include mid-break {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
 }
 
 .heroSvg {

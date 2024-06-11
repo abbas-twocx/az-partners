@@ -92,8 +92,8 @@
     }
 
     &:last-child {
-      width: calc(100% + 100px);
-      height: calc(100% + 100px);
+      width: calc(80% + 100px);
+      height: calc(80% + 100px);
       background-color: var(--theme-brand-orange);
 
       @include mid-break {

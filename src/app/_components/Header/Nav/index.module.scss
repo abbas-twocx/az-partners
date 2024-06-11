@@ -30,3 +30,10 @@
   opacity: 0;
   visibility: hidden;
 }
+
+.bookingBtn {
+
+  @include mid-break {
+    display: none;
+  }
+}
