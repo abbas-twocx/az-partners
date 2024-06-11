@@ -36,12 +36,15 @@
 
   .certifications {
     display: flex;
-    gap: 10px;
-    justify-content: center;
+    flex-wrap: wrap;
+    columns: 2;
+    gap: 24px;
+    justify-content: start;
 
     img {
-      width: 124px;
-      height: 80px;
+      width: 45%;
+      height: auto;
+      max-height: 100px;
     }
   }
 }
