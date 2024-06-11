@@ -17,7 +17,7 @@ export const InitTheme: React.FC = () => {
       var hasImplicitPreference = typeof mql.matches === 'boolean'
 
       if (hasImplicitPreference) {
-        return mql.matches ? 'dark' : 'light'
+        return 'light';
       }
 
       return null
