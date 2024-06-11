@@ -12,9 +12,7 @@ export const OurValuesBlock: React.FC<
   Props & {
     id?: string
   }
-> = ({ richText, media, cards }) => {
-
-  console.log('OUR VALUES: ', richText);
+> = ({ richText }) => {
   
   
   return (

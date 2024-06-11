@@ -4,11 +4,7 @@ import { Page } from '../../../payload/payload-types'
 import { Gutter } from '../../_components/Gutter'
 import { CMSLink } from '../../_components/Link'
 import RichText from '../../_components/RichText'
-import { VerticalPadding } from '../../_components/VerticalPadding'
-
 import classes from './index.module.scss'
-import Image from 'next/image'
-
 type Props = Extract<Page['layout'][0], { blockType: 'cta' }>
 
 export const CallToActionBlock: React.FC<
