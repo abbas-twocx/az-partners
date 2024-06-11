@@ -5,6 +5,7 @@ import { Gutter } from '../../_components/Gutter'
 import { CMSLink } from '../../_components/Link'
 import RichText from '../../_components/RichText'
 import classes from './index.module.scss'
+import CtaSvg from './ctaSvg'
 type Props = Extract<Page['layout'][0], { blockType: 'cta' }>
 
 export const CallToActionBlock: React.FC<
@@ -28,6 +29,9 @@ export const CallToActionBlock: React.FC<
           </div>
         </div>
       </Gutter>
+      <div className={classes.ctaSvgWrapper}>
+        <CtaSvg />
+      </div>
     </section>
   )
 }
