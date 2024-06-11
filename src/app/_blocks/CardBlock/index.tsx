@@ -57,7 +57,7 @@ export const CardBlock: React.FC<
                   {card?.link?.url != '#' && (
                     <CMSLink appearance="none" className={classes.link} {...card.link} />
                   )}
-                </div>
+                </div>   
               )
             })}
           </div>
