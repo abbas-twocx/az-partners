@@ -32,7 +32,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "src/app/_providers/Theme/InitTheme/oldthemecode"  ],
   "exclude": [
     "node_modules"
   ],
