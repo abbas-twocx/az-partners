@@ -6,6 +6,7 @@ import {
   CONTENT,
   MEDIA_BLOCK,
   OUR_PROCESS_BLOCK,
+  OUR_SERVICES_BLOCK,
   OUR_VALUES_BLOCK,
   TEXT_WITH_IMAGE_BLOCK,
 } from './blocks'
@@ -48,6 +49,7 @@ export const PAGE = `
           ${CARDS_WITH_IMAGE_BLOCK}
           ${TEXT_WITH_IMAGE_BLOCK}
           ${OUR_PROCESS_BLOCK}
+          ${OUR_SERVICES_BLOCK}
         }
         ${META}
       }

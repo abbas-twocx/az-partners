@@ -15,6 +15,7 @@ import { OurValuesBlock } from '../../_blocks/OurValuesBlock'
 import { CardsWithImageBlock } from '../../_blocks/CardsWithImageBlock'
 import TextWithImageBlock from '../../_blocks/TextWithImageBlock'
 import { OurProcessBlock } from '../../_blocks/OurProcessBlock'
+import { OurServicesBlock } from '../../_blocks/OurServicesBlock'
 
 const blockComponents = {
   cta: CallToActionBlock,
@@ -27,7 +28,8 @@ const blockComponents = {
   cardsWithImageBlock: CardsWithImageBlock,
   textWithImageBlock: TextWithImageBlock,
   ourValuesBlock: OurValuesBlock,
-  ourProcessBlock: OurProcessBlock
+  ourProcessBlock: OurProcessBlock,
+  ourServicesBlock: OurServicesBlock,
 }
 
 export const Blocks: React.FC<{

@@ -7,9 +7,7 @@ import RichText from '../../_components/RichText'
 import { VerticalPadding } from '../../_components/VerticalPadding'
 
 import classes from './index.module.scss'
-import Image from 'next/image'
 import CardsLoading from '../../_components/CardsLoading'
-import Link from 'next/link'
 
 type Props = Extract<Page['layout'][0], { blockType: 'ourProcessBlock' }>
 
@@ -27,7 +25,7 @@ export const OurProcessBlock: React.FC<
         </div>
         <Suspense fallback={<CardsLoading />}>
           <div className={classes.cardsWrapper}>
-            {cards.map((card, i) => {
+            {cards && cards?.map((card, i) => {
               const fileName = card?.media?.filename
               const imageAltText = card?.media?.alt
 

@@ -93,7 +93,7 @@ export const CARD_BLOCK = `
     id
     ${MEDIA}
     cardContent
-    link ${LINK_FIELDS({ disableAppearance: true  })}
+    link ${LINK_FIELDS({ disableAppearance: true })}
   }
 }
 `
@@ -113,9 +113,21 @@ export const OUR_PROCESS_BLOCK = `
 ...on OurProcessBlock {
   blockType
   richText
-  link ${LINK_FIELDS({ disableAppearance: true  })}
+  link ${LINK_FIELDS({ disableAppearance: true })}
   cards {
     id
+    heading
+    description
+  }
+}
+`
+export const OUR_SERVICES_BLOCK = `
+...on OurServicesBlock {
+  blockType
+  richText
+cards {
+    id
+    ${MEDIA}
     heading
     description
   }

@@ -235,6 +235,43 @@ export interface Page {
         richText: {
           [k: string]: unknown;
         }[];
+        link: {
+          type?: ('reference' | 'custom') | null;
+          newTab?: boolean | null;
+          reference?: {
+            relationTo: 'pages';
+            value: string | Page;
+          } | null;
+          url?: string | null;
+          label: string;
+          appearance?: ('default' | 'primary' | 'secondary') | null;
+        };
+        cards?:
+          | {
+              media: string | Media;
+              heading: string;
+              description: string;
+              link: {
+                type?: ('reference' | 'custom') | null;
+                newTab?: boolean | null;
+                reference?: {
+                  relationTo: 'pages';
+                  value: string | Page;
+                } | null;
+                url?: string | null;
+                label: string;
+              };
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'ourServicesBlock';
+      }
+    | {
+        richText: {
+          [k: string]: unknown;
+        }[];
         media: string | Media;
         cards?:
           | {
