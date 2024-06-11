@@ -1,7 +1,8 @@
 @use 'queries' as *;
+@import url('https://fonts.cdnfonts.com/css/cooper-hewitt');
 
 %h1 {
-  font-weight: 700;
+  font-weight: 706;
 }
 
 %h2,
@@ -9,14 +10,14 @@
 %h4,
 %h5,
 %h6 {
-  font-weight: 600;
+  font-weight: 706;
 }
 
 %h1 {
   margin: 0;
   font-size: 62px;
   line-height: 100%;
-  font-weight: bold;
+  font-weight: 706;
   margin-bottom: 24px;
 
   @include mid-break {
@@ -31,7 +32,7 @@
   margin: 0;
   font-size: 48px;
   line-height: 110%;
-  font-weight: bold;
+  font-weight: 706;
   margin-bottom: 24px;
 
   @include mid-break {
@@ -46,7 +47,7 @@
   margin: 0;
   font-size: 48px;
   line-height: 120%;
-  font-weight: bold;
+  font-weight: 706;
   margin-bottom: 16px;
 
   @include mid-break {
@@ -62,7 +63,7 @@
   margin: 0;
   font-size: 42px;
   line-height: 120%;
-  font-weight: bold;
+  font-weight: 706;
   margin-bottom: 16px;
 
 
@@ -78,7 +79,7 @@
   margin: 0;
   font-size: 32px;
   line-height: 120%;
-  font-weight: bold;
+  font-weight: 706;
   margin-bottom: 16px;
 
 
@@ -94,7 +95,7 @@
   margin: 0;
   font-size: inherit;
   line-height: inherit;
-  font-weight: bold;
+  font-weight: 706;
   margin-bottom: 16px;
 
 }

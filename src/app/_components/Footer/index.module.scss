@@ -40,12 +40,15 @@
 
   .certifications {
     display: flex;
-    gap: 10px;
-    justify-content: center;
+    flex-wrap: wrap;
+    columns: 2;
+    gap: 24px;
+    justify-content: start;
 
     img {
-      width: 124px;
-      height: 80px;
+      width: 45%;
+      height: auto;
+      max-height: 100px;
     }
   }
 }
@@ -81,7 +84,7 @@
     margin: 0;
     font-size: 20px;
     color: #000000;
-    font-weight: 500;
+    font-weight: 705;
     line-height: 120%;
     margin-bottom: 18px;
   }
@@ -91,7 +94,7 @@
     line-height: 130%;
     margin-bottom: 12px;
     color: #000000;
-    font-weight: 400;
+    font-weight: 704;
     text-decoration: none;
     cursor: pointer;
     transition: 300ms color ease-in-out;
