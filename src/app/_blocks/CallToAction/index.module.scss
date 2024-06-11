@@ -4,8 +4,9 @@ $spacer-h: calc(var(--block-padding) / 2);
 
 .ctaSectionWrapper {
   background-color: var(--theme-brand-dark-blue);
-  padding: 60px 0;
+  padding: 60px 0 0 0;
   color: white;
+  overflow: hidden;
 }
 
 .callToAction {
@@ -14,8 +15,7 @@ $spacer-h: calc(var(--block-padding) / 2);
   width: 100%;
   text-align: center;
 
-  @include mid-break {
-  }
+  @include mid-break {}
 }
 
 .ctaGutter {
@@ -44,6 +44,10 @@ $spacer-h: calc(var(--block-padding) / 2);
 
 .richText {
   color: white;
+
+  p {
+    color: white !important;
+  }
 }
 
 .linkGroup {
@@ -53,8 +57,14 @@ $spacer-h: calc(var(--block-padding) / 2);
   gap: $spacer-h;
   flex-shrink: 0;
   margin-top: 32px;
+  margin-bottom: 86px;
 
   >* {
     margin-bottom: 0;
   }
+}
+
+.ctaSvgWrapper {
+  display: flex;
+  transform: translateY(28px);
 }
