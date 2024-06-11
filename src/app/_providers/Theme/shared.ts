@@ -10,7 +10,7 @@ export const getImplicitPreference = (): Theme | null => {
   const hasImplicitPreference = typeof mql.matches === 'boolean'
 
   if (hasImplicitPreference) {
-    return 'light';
+    return mql.matches ? 'dark' : 'light'
   }
 
   return null
