@@ -23,7 +23,12 @@ export const HeaderNav: React.FC<{ header: HeaderType; settings: Settings }> = (
     <div className={classes.navWrapper}>
       <div>
         <Link href={'/'}>
-          <Image width={220} height={20} alt={logoAlt} src={`${process.env.NEXT_PUBLIC_SERVER_URL}/media/${fileName}`} />
+          <Image
+            width={220}
+            height={20}
+            alt={logoAlt}
+            src={`${process.env.NEXT_PUBLIC_SERVER_URL}/media/${fileName}`}
+          />
         </Link>
       </div>
       <nav
@@ -39,7 +44,7 @@ export const HeaderNav: React.FC<{ header: HeaderType; settings: Settings }> = (
         {navItems.map(({ link }, i) => {
           return <CMSLink key={i} {...link} appearance="none" />
         })}
-        <CMSLink className={classes.bookingBtn} {...header?.link} appearance="primary" />
+        {/* <CMSLink className={classes.bookingBtn} {...header?.link} appearance="primary" /> */}
         {/* {user && <Link href="/account">Account</Link>} */}
         {/*
         // Uncomment this code if you want to add a login link to the header

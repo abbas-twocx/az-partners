@@ -3,7 +3,7 @@ import React from 'react'
 import { Page } from '../../../payload/payload-types'
 import { Gutter } from '../../_components/Gutter'
 import RichText from '../../_components/RichText'
-import Image from 'next/image' // Ensure you have next/image installed and set up
+import Image from 'next/image'
 
 import classes from './index.module.scss'
 import TextWithImageSvg from './TextWithImageSvg'

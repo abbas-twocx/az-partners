@@ -15,6 +15,7 @@ export const CallToActionBlock: React.FC<
 > = ({ links, richText, invertBackground }) => {
   return (
     <section
+      id='cta'
       className={[classes.ctaSectionWrapper, invertBackground && classes.invert]
         .filter(Boolean)
         .join(' ')}
