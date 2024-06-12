@@ -12,7 +12,12 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    domains: ['localhost', process.env.NEXT_PUBLIC_SERVER_URL]
+    domains: [
+      'localhost',
+      process.env.NEXT_PUBLIC_SERVER_URL,
+      'azaccountingservices.com',
+      'azaccountingservices.com.au',
+    ]
       .filter(Boolean)
       .map(url => url.replace(/https?:\/\//, '')),
   },
