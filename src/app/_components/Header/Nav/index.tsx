@@ -23,7 +23,12 @@ export const HeaderNav: React.FC<{ header: HeaderType; settings: Settings }> = (
     <div className={classes.navWrapper}>
       <div>
         <Link href={'/'}>
-          <Image width={220} height={20} alt={logoAlt} src={`${process.env.NEXT_PUBLIC_SERVER_URL}/media/${fileName}`} />
+          <Image
+            width={220}
+            height={20}
+            alt={logoAlt}
+            src={`${process.env.NEXT_PUBLIC_SERVER_URL}/media/${fileName}`}
+          />
         </Link>
       </div>
       <nav

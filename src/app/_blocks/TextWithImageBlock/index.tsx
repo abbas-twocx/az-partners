@@ -22,7 +22,7 @@ export const TextWithImageBlock: React.FC<
           <TextWithImageSvg/>
         </div>
         <div className={classes.leftSection}>
-          <Image
+          <img
             alt={media.alt || 'Image'}
             width={990}
             height={980}
