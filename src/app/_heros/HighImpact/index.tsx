@@ -30,7 +30,7 @@ export const HighImpactHero: React.FC<Page['hero']> = ({ richText, media, links 
           )}
         </div>
         <div className={classes.imageWrapper}>
-          <img
+          <Image
             width={420}
             height={420}
             alt={media?.alt || 'Hero Image'}
