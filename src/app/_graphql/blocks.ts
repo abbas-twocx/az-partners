@@ -97,6 +97,12 @@ export const CARD_BLOCK = `
   }
 }
 `
+export const LEADS_FORM_BLOCK = `
+...on LeadsFormBlock {
+  blockType
+  richText
+}
+`
 export const CARDS_WITH_IMAGE_BLOCK = `
 ...on CardsWithImageBlock {
   blockType

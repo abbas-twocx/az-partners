@@ -22,11 +22,12 @@ export const FOOTER = `
   navItemsGroup {
     navGroupName
     navItems {
-      link ${LINK_FIELDS({ disableAppearance: true })}
+      link ${LINK_FIELDS()}
 		}
   }
   footerSocials {
     ${MEDIA}
+    link ${LINK_FIELDS()}
   }
   copyrightText
   }

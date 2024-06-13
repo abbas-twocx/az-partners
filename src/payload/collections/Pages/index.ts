@@ -17,6 +17,7 @@ import { CardsWithImageBlock } from '../../blocks/CardsWithImageBlock'
 import { TextWithImageBlock } from '../../blocks/TextWithImageBlock'
 import { OurProcessBlock } from '../../blocks/OurProcessBlock'
 import { OurServicesBlock } from '../../blocks/OurServicesBlock'
+import { LeadsFormBlock } from '../../blocks/LeadsFormBlock'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -70,7 +71,7 @@ export const Pages: CollectionConfig = {
               name: 'layout',
               type: 'blocks',
               required: true,
-              blocks: [CallToAction, Content, MediaBlock, Archive, CardBlock, CardsWithImageBlock, TextWithImageBlock , OurProcessBlock, OurServicesBlock, OurValuesBlock],
+              blocks: [CallToAction, Content, MediaBlock, Archive, CardBlock, CardsWithImageBlock, TextWithImageBlock , OurProcessBlock, OurServicesBlock, OurValuesBlock, LeadsFormBlock],
             },
           ],
         },

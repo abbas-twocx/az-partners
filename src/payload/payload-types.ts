@@ -15,6 +15,7 @@ export interface Config {
     categories: Category;
     users: User;
     comments: Comment;
+    leads: Lead;
     redirects: Redirect;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -295,6 +296,14 @@ export interface Page {
         id?: string | null;
         blockName?: string | null;
         blockType: 'OurValuesBlock';
+      }
+    | {
+        richText: {
+          [k: string]: unknown;
+        }[];
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'leadsFormBlock';
       }
   )[];
   slug?: string | null;
@@ -752,6 +761,16 @@ export interface Comment {
   createdAt: string;
   _status?: ('draft' | 'published') | null;
 }
+export interface Lead {
+  id: string;
+  firstName: string;
+  lastName?: string | null;
+  email?: string | null;
+  phone: string;
+  message?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
 export interface Redirect {
   id: string;
   from: string;
@@ -852,6 +871,7 @@ export interface Footer {
                 } | null;
                 url?: string | null;
                 label: string;
+                appearance?: ('default' | 'primary' | 'secondary') | null;
               };
               id?: string | null;
             }[]
@@ -862,6 +882,17 @@ export interface Footer {
   footerSocials?:
     | {
         media?: string | Media | null;
+        link: {
+          type?: ('reference' | 'custom') | null;
+          newTab?: boolean | null;
+          reference?: {
+            relationTo: 'pages';
+            value: string | Page;
+          } | null;
+          url?: string | null;
+          label: string;
+          appearance?: ('default' | 'primary' | 'secondary') | null;
+        };
         id?: string | null;
       }[]
     | null;

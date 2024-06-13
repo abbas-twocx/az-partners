@@ -4,6 +4,7 @@ import {
   CARD_BLOCK,
   CARDS_WITH_IMAGE_BLOCK,
   CONTENT,
+  LEADS_FORM_BLOCK,
   MEDIA_BLOCK,
   OUR_PROCESS_BLOCK,
   OUR_SERVICES_BLOCK,
@@ -50,6 +51,7 @@ export const PAGE = `
           ${TEXT_WITH_IMAGE_BLOCK}
           ${OUR_PROCESS_BLOCK}
           ${OUR_SERVICES_BLOCK}
+          ${LEADS_FORM_BLOCK}
         }
         ${META}
       }

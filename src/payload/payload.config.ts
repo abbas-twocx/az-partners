@@ -25,6 +25,7 @@ import { Header } from './globals/Header'
 import { Settings } from './globals/Settings'
 import Icon from './graphics/icon'
 import Logo from './graphics/logo'
+import Leads from './collections/Leads'
 
 const generateTitle: GenerateTitle = () => {
   return 'My Website'
@@ -39,8 +40,8 @@ export default buildConfig({
     user: Users.slug,
     bundler: webpackBundler(), // bundler-config
     meta: {
-      favicon: "/favicon.svg",
-      ogImage: "/az-logo.svg",
+      favicon: '/favicon.svg',
+      ogImage: '/az-logo.svg',
     },
     components: {
       // beforeLogin: [BeforeLogin],
@@ -48,7 +49,7 @@ export default buildConfig({
       graphics: {
         Icon,
         Logo,
-      }
+      },
     },
     webpack: config => ({
       ...config,
@@ -72,7 +73,7 @@ export default buildConfig({
   }),
   // database-adapter-config-end
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
-  collections: [Pages, Posts, Projects, Media, Categories, Users, Comments],
+  collections: [Pages, Posts, Projects, Media, Categories, Users, Comments, Leads],
   globals: [Settings, Header, Footer],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),

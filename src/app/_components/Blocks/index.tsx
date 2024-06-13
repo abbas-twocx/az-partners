@@ -16,6 +16,7 @@ import { CardsWithImageBlock } from '../../_blocks/CardsWithImageBlock'
 import TextWithImageBlock from '../../_blocks/TextWithImageBlock'
 import { OurProcessBlock } from '../../_blocks/OurProcessBlock'
 import { OurServicesBlock } from '../../_blocks/OurServicesBlock'
+import { LeadsFormBlock } from '../../_blocks/LeadsFormBlock'
 
 const blockComponents = {
   cta: CallToActionBlock,
@@ -30,6 +31,7 @@ const blockComponents = {
   ourValuesBlock: OurValuesBlock,
   ourProcessBlock: OurProcessBlock,
   ourServicesBlock: OurServicesBlock,
+  leadsForm: LeadsFormBlock
 }
 
 export const Blocks: React.FC<{

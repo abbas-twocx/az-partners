@@ -28,11 +28,7 @@ export const Footer: GlobalConfig = {
         {
           name: 'navItems',
           type: 'array',
-          fields: [
-            link({
-              appearances: false,
-            }),
-          ],
+          fields: [link()],
         },
       ],
     },
@@ -48,6 +44,7 @@ export const Footer: GlobalConfig = {
           relationTo: 'media',
           label: 'Social Icon',
         },
+        link(),
       ],
     },
     {
