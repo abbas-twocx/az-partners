@@ -13,6 +13,7 @@ export const fetchComments = async (args: {
     headers: {
       'Content-Type': 'application/json',
     },
+    cache: 'no-store',
     body: JSON.stringify({
       query: user ? COMMENTS_BY_USER : COMMENTS_BY_DOC,
       variables: {
